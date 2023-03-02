@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/fontawesome.mi">
+</head>
+<body>
+<div class="starting">
+     <form onsubmit="sendEmail(); reset(); return false;">
+     <h3>GET IN TOUCH WITH US</h3>
+     <input type="text" id="name" placeholder="Your Name" required>
+     <input type="email" id="email" placeholder="Email id" required>
+     <input type="text" id="phone" placeholder="Phone no." required>
+     <textarea id="message" rows="4" placeholder="How Can We Help You"></textarea>
+     <button type="submt">Send</button>
+</form>
+</div>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>
+  function sendEmail(){
+    Email.send({
+    Host : "smtp.email.com",
+    Username : "Daniel Ekwuribe",
+    Password : "Chizzyrayzy1",
+    To : 'daekwuribe@icloud.com',
+    From : document.getElementById("email").value,
+    Subject : "New Contact From Enquiry",
+    Body : "And this is the body"
+}).then(
+  message => alert(message)
+);
+  }
+</script>
+</body>
+</html>
