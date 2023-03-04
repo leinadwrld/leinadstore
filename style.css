@@ -102,6 +102,10 @@ p{
    max-width: 100%;
    padding: 47px;
 }
+.col-22{
+    flex-basis: 50%;
+    min-width: 300px;
+}
 .col-22 img{
    max-width: 100%;
    padding: 47px;
